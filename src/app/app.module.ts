@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     ActionComponent,
     HomeComponent,
     ErrorComponent,
-    PostmanagerComponent
+    PostmanagerComponent,
   ],
   imports: [
     BrowserModule,

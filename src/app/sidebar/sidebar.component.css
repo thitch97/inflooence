@@ -5,4 +5,5 @@
 	margin: 0;
 	padding: 20px;
 	float: left;
+	flex: 1 0 auto;
 }
