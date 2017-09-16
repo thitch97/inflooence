@@ -10,40 +10,6 @@ import { ActionsService } from '../actions.service';
   styleUrls: ['./action.component.css'],
   providers: [ActionsService]
 })
-export class ActionComponent implements OnInit {
 
-	actions: FirebaseListObservable<any[]>;
-	actionList: any[];
-	idSubject: Subject<any>;
-	id: string;
-	result: any;
+export class ActionComponent{}
 
-  constructor(private db: AngularFireDatabase, private actionSvc:ActionsService) {
-
-  	this.idSubject = new Subject();
-  	this.actions = db.list('/action');
-  }
-
-  ngOnInit() {
-
-  	this.actions.subscribe(actions =>{
-  		this.actionList = actions;
-  		console.log(this.actionList);
-  	});
-  }
-
-  search(id:string){
-
-  	if (this.actionList != null){
-	  	for (let action of this.actionList){
-	  		console.log(action);
-	  		if (action.id == id){
-	  			this.result = action;
-	  		}
-	  	}
-  	}
-  	console.log(this.result);
-  }
-
-
-}

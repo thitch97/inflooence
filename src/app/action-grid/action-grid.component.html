@@ -1,15 +1,15 @@
 <!-- Grid Component -->
 <div id="page-grid">
 
-  <div class="grid-action">
+  <div *ngFor="let action of actionList" class="grid-action">
   	<div class="thumbnail">
       <a [routerLink] = "['/action']">
-  			<img src="assets/thumbnail.jpg" alt="Action Thumbnail">
+  			<img src="{{action.thumbnailUrl}}" alt="Action Thumbnail">
   		</a>
   	</div>
   	<div class="action-content">
   		<a [routerLink] = "['/action']">
-        <h5>Action Goes Here</h5>
+        <h5>{{action.actionName}}</h5>
       </a>
   		<p>by Fundee</p>
   	</div>
