@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: "AIzaSyAkfbPhzRZNSMz1HnmqHuEQD4wkBIzKIGA",
+    authDomain: "inflooence-b1327.firebaseapp.com",
+    databaseURL: "https://inflooence-b1327.firebaseio.com",
+    projectId: "inflooence-b1327",
+    storageBucket: "inflooence-b1327.appspot.com",
+    messagingSenderId: "617691879574"
   }
 };
