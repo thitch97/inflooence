@@ -1,0 +1,42 @@
+#page-grid {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 30px;
+	width: 70%;
+	float: left;
+}
+
+.grid-action {
+	flex: none;
+	background: #fafafa;
+	color: #fff;
+	margin: 15px;
+	margin-bottom: 30px;
+	padding: 0;
+	max-height: 300px;
+	overflow: hidden;
+	width: 30%;
+}
+
+.grid-action * a {
+	text-decoration: none !important;
+}
+
+.thumbnail {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+.action-content {
+	margin: 0;
+	padding: 15px;
+	color: #050505;
+}

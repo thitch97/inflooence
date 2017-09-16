@@ -1,1 +1,21 @@
-<app-action></app-action>
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.$value}}
+  </li>
+</ul>
+<!-- Header -->
+<div id="page-header">
+  <a href="#"><img id="logo" src="assets/logo.gif" alt="Logo"></a>
+</div>
+<!-- End of Header -->
+
+<router-outlet></router-outlet>
+
+
+<!-- Footer -->
+<div id="page-footer">
+  <p>Copyright &copy; 2017 Inflooence. All Rights Reserved.</p>
+  <ul>
+  	<li><a [routerLink] = "['/']">Actions</a></li>
+  </ul>
+</div>

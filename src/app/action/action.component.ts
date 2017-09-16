@@ -26,7 +26,7 @@ export class ActionComponent implements OnInit {
 
   ngOnInit() {
 
-  	this.actions.subscribe(actions =>{ 
+  	this.actions.subscribe(actions =>{
   		this.actionList = actions;
   		console.log(this.actionList);
   	});
