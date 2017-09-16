@@ -6,10 +6,17 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './login/login.component';
+import { AddActionComponent } from './add-action/add-action.component';
+import { ActionComponent } from './action/action.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    AddActionComponent,
+    ActionComponent,
   ],
   imports: [
     BrowserModule,

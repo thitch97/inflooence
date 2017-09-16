@@ -1,0 +1,6 @@
+<div *ngIf="actionList && result">
+<p>{{result.actionName}}</p>
+</div>
+
+<input type="text" #id placeholder="ID:">
+<button (click)="search(id.value)">Search</button>
