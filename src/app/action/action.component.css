@@ -1,10 +1,12 @@
 #individual-action {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column nowrap;
 	justify-content: flex-start;
 	margin: 0;
-	padding: 30px 50px;
+	padding: 30px;
 	width: 70%;
+	float: left;
+	margin-bottom: 75px;
 }
 
 .profile {
@@ -57,4 +59,3 @@
 	padding-top: 30px;
 	text-align: justify;
 }
-

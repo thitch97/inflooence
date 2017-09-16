@@ -1,6 +1,9 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
 
 html, body {
-	min-height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -10,6 +13,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 75px;
+	overflow: auto;
 }
 
 * {
