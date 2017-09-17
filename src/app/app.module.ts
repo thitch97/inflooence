@@ -13,12 +13,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { PostmanagerComponent } from './postmanager/postmanager.component';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { AboutComponent } from './about/about.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
+   { path: '', component: ActionGridComponent },
    { path: 'action', component: ActionComponent },
    { path: 'action/create', component: PostmanagerComponent },
    { path: 'action/edit', component: PostmanagerComponent },
-   { path: '', component: ActionGridComponent },
+   { path: 'about', component: AboutComponent },
+   { path: 'sponsor', component: SponsorComponent },
+   { path: 'register', component: SignupComponent },
+   { path: 'login', component: LoginComponent },
    { path: '**', component: ErrorComponent },
 ];
 
@@ -31,6 +40,11 @@ const appRoutes: Routes = [
     HomeComponent,
     ErrorComponent,
     PostmanagerComponent,
+    MainmenuComponent,
+    AboutComponent,
+    SponsorComponent,
+    SignupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
