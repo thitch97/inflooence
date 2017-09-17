@@ -1,0 +1,25 @@
+.signup{
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 65%;
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.signup input {
+	margin: 10px auto;
+}
+
+#signup-textarea {
+	min-height: 200px;
+}
+
+.attachment {
+	padding-top: 20px;
+}
+
+.funding-radios * {
+	margin-left: 25px;
+	display: inline-block;
+	width: auto;
+}

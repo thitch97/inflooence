@@ -1,0 +1,27 @@
+.login-box {
+	width: 50%;
+	display: flex;
+	padding: 50px;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.login-box button {
+	display: block;
+	margin: 10px auto;
+	padding: 15px;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.login-box button:hover {
+	background: #fff !important;
+	color: #00BFA5;
+}

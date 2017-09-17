@@ -16,15 +16,19 @@ import { PostmanagerComponent } from './postmanager/postmanager.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { AboutComponent } from './about/about.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
+   { path: '', component: ActionGridComponent },
    { path: 'action', component: ActionComponent },
    { path: 'action/create', component: PostmanagerComponent },
    { path: 'action/edit', component: PostmanagerComponent },
    { path: 'about', component: AboutComponent },
    { path: 'sponsor', component: SponsorComponent },
-   { path: '', component: ActionGridComponent },
-   { path: '**', component: ErrorComponent }
+   { path: 'register', component: SignupComponent },
+   { path: 'login', component: LoginComponent },
+   { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
@@ -39,6 +43,8 @@ const appRoutes: Routes = [
     MainmenuComponent,
     AboutComponent,
     SponsorComponent,
+    SignupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
