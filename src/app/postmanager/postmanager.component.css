@@ -3,13 +3,17 @@
 	flex-flow: column nowrap;
 	max-width: 65%;
 	margin: 0 auto;
-	padding: 50px;
+	padding: 30px;
 }
 
 .post-manager input {
-	margin: 20px auto;
+	margin: 10px auto;
 }
 
 #action-textarea {
-	min-height: 300px;
+	min-height: 200px;
+}
+
+.attachment {
+	padding-top: 20px;
 }

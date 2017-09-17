@@ -13,13 +13,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { PostmanagerComponent } from './postmanager/postmanager.component';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { AboutComponent } from './about/about.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
 
 const appRoutes: Routes = [
    { path: 'action', component: ActionComponent },
    { path: 'action/create', component: PostmanagerComponent },
    { path: 'action/edit', component: PostmanagerComponent },
+   { path: 'about', component: AboutComponent },
+   { path: 'sponsor', component: SponsorComponent },
    { path: '', component: ActionGridComponent },
-   { path: '**', component: ErrorComponent },
+   { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({
@@ -31,6 +36,9 @@ const appRoutes: Routes = [
     HomeComponent,
     ErrorComponent,
     PostmanagerComponent,
+    MainmenuComponent,
+    AboutComponent,
+    SponsorComponent,
   ],
   imports: [
     BrowserModule,
