@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { SponsorComponent } from './sponsor/sponsor.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
    { path: '', component: ActionGridComponent },
