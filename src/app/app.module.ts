@@ -15,11 +15,14 @@ import { ErrorComponent } from './error/error.component';
 import { PostmanagerComponent } from './postmanager/postmanager.component';
 
 const appRoutes: Routes = [
-   { path: 'action', component: ActionComponent },
+   {
+      path: 'action/:id',
+      component: ActionComponent
+   },
    { path: 'action/create', component: PostmanagerComponent },
    { path: 'action/edit', component: PostmanagerComponent },
    { path: '', component: ActionGridComponent },
-   { path: '**', component: ErrorComponent },
+   { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({

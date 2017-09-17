@@ -1,65 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges} from '@angular/core';
 import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2/database';
 import { Subject } from 'rxjs/Subject';
-import { ActionsService } from '../actions.service';
+import {LoaderService } from '../loader.service';
+
 
 @Component({
   selector: 'app-action-grid',
   templateUrl: './action-grid.component.html',
   styleUrls: ['./action-grid.component.css'],
-  providers: [ActionsService]
+  providers: [LoaderService]
 })
-export class ActionGridComponent implements OnInit {
+export class ActionGridComponent {
 
-	actions: FirebaseListObservable<any[]>;
-	fundees: FirebaseListObservable<any[]>;
-	fundeeList: any[];
-	actionList: any[];
-	idSubject: Subject<any>;
-	id: string;
 	aResult: any;
 	fResult: any;
 	//fundeeMap : {[key:string]:string;} = {};
 
-  constructor(private db: AngularFireDatabase, private actionSvc:ActionsService) {
-
-  	this.idSubject = new Subject();
-  	this.actions = db.list('/action');
-  	this.fundees = db.list('/fundee');
-  }
-
-  ngOnInit() {
-
-  	this.actions.subscribe(actions =>{
-  		this.actionList = actions;
-  		console.log(this.actionList);
-  	});
-
-  	this.fundees.subscribe(fundees => {
-  		this.fundeeList = fundees;
-  		console.log(this.fundeeList);
-  	})
-  }
-
-  search(id:string){
-
-  	if (this.actionList != null){
-	  	for (let action of this.actionList){
-	  		console.log(action);
-	  		if (action.id == id){
-	  			this.aResult = action;
-
-	  		}
-	  	}
-
-	  	for (let fundee of this.fundeeList){
-	  		if (this.aResult.fundeeId == fundee.id){
-	  			this.fResult = fundee;
-	  		}
-	  	}
-  	}
+  constructor(private db: AngularFireDatabase, private loader: LoaderService) {}
   
+  get actions() {
+  	return this.loader.actionList;
   }
+
+  get fundees() {
+  	return this.loader.fundeeList;
+  }
+
+  get fmap() {
+  	return this.loader.fundeeMap;
+  }
+
+  // search(name:string){
+
+  // 	if (this.loader.actionList != null){
+	 //  	for (let action of this.loader.actionList){
+	 //  		console.log(action);
+	 //  		if (action.actionName == name ){
+	 //  			this.aResult = action;
+
+	 //  		}
+	 //  	}
+
+	 //  	for (let fundee of this.loader.fundeeList){
+	 //  		if (this.aResult.fundeeId == fundee.id){
+	 //  			this.fResult = fundee;
+	 //  		}
+	 //  	}
+  // 	}
+  
+  // }
 
 
 }

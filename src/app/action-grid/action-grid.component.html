@@ -1,17 +1,23 @@
+<!-- <div>
+  
+  <input type="text" #actionName placeholder="">
+  <button (click)="search(actionName.value)">Search</button>
+</div>-->
+
 <!-- Grid Component -->
 <div id="page-grid">
 
-  <div *ngFor="let action of actionList" class="grid-action">
+  <div *ngFor="let action of actions" class="grid-action">
   	<div class="thumbnail">
-      <a [routerLink] = "['/action']">
+      <a [routerLink] = "['/action', action.id]">
   			<img src="{{action.thumbnailUrl}}" alt="Action Thumbnail">
   		</a>
   	</div>
   	<div class="action-content">
-  		<a [routerLink] = "['/action']">
+  		<a [routerLink] = "['/action', action.id]">
         <h5>{{action.actionName}}</h5>
       </a>
-  		<p>by Fundee</p>
+  		<p>{{fmap[action.fundeeId]}}</p>
   	</div>
 	</div>
 
