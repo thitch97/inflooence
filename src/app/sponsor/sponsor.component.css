@@ -1,18 +1,17 @@
-#individual-action {
+#individual-sponsor {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	margin: 0;
+	margin: 0 auto;
 	padding: 30px;
-	width: 79%;
-	float: left;
+	width: 70%;
 	margin-bottom: 75px;
 }
 
 .profile {
 	width: 100%;
 	display: flex;
-	margin: 0;
+	margin: 0 auto;
 	padding: 20px;
 	justify-content: flex-start;
 	align-items: stretch;
@@ -42,7 +41,7 @@
 	align-content: center;
 }
 
-.action-info, .action-media {
+.sponsor-info {
 	background: transparent;
 	width: 100%;
 	margin: 0;
@@ -52,9 +51,9 @@
 	flex-flow: column nowrap;
 }
 
-.action-info #description {
+.sponsor-info #description {
 	width: 90%;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	padding-top: 30px;
 	text-align: justify;

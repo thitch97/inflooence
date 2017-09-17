@@ -12,6 +12,7 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 75px;
 	margin-bottom: 75px;
 	overflow: auto;
 }
@@ -22,5 +23,15 @@ body {
 
 #logo {
 	height: 36px;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+	color: #00BFA5 !important;
+}
+
+button {
+	background: #00BFA5 !important;
+	outline: none !important;
+	border: 0 !important;
 }
 

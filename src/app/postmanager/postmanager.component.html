@@ -3,14 +3,19 @@
 	<br />
 	<form>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Action Title">
+      <input type="text" class="form-control" placeholder="Action Title" required="true">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Contributor">
+      <input type="text" class="form-control" placeholder="Contributor" required="true">
     </div>
     <div class="col">
-      <textarea class="form-control" id="action-textarea" placeholder="Describe your recent action." maxlength="500"></textarea>
+      <textarea class="form-control" id="action-textarea" placeholder="Describe your recent action." maxlength="1500" required="true"></textarea>
     </div>
+    <div class="col attachment">
+      <p>Attach Media...</p>
+      <input type="file" class="form-control-file" id="inputFile">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
 	</form>
 </div>
 
